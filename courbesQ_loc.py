@@ -57,8 +57,9 @@ jour = date_entree.strftime("%d") #'07'
 
 t_48demiheures, val_kWh, d_YMD = valkWh_jour(mois, jour, df)
 
-fig = plt.figure(figsize=(10, 6), dpi=80)
-ax = fig.add_subplot(211)
+#fig = plt.figure(figsize=(10, 6), dpi=80)
+fig = plt.figure(figsize=(12, 6), dpi=80)
+ax = fig.add_subplot(111)
 ax.set_title(d_YMD)
 #fig, ax = plt.subplots() 
 
@@ -67,6 +68,8 @@ ax.set_ylim(0,5.0)
 ax.set_yticks(np.linspace(0., 5., 10, endpoint= False))
 plt.grid(color='black', which='major', axis='y', linestyle='-', alpha=0.2)
 #plt.grid(True)
+
+ax.set_ylabel('kWh', rotation='horizontal', verticalalignment='baseline', y=1.0)
 
 bar_width = 0.35
 ax.bar(t_48demiheures, val_kWh, bar_width)

@@ -20,7 +20,7 @@ from matplotlib import pyplot as plt
 #path_Dropbox = 'C:/Users/btvan/Dropbox'
 #dir_data = path_Dropbox + '/' + 'dossiers VAN/Fichiers/EDF'
 
-fname = "Enedis_Conso_Heure_20200513-20200618.csv" #à partir du 13/05 
+fname = "Enedis_Conso_Heure_20200513-20200624.csv" #à partir du 13/05 
 df = pd.read_csv(fname, sep=';')
 
 def valkWh_jour(mois, jour, df):

@@ -17,11 +17,11 @@ matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 
 
-path_Dropbox = 'C:/Users/btvan/Dropbox'
-dir_data = path_Dropbox + '/' + 'dossiers VAN/Fichiers/EDF'
+#path_Dropbox = 'C:/Users/btvan/Dropbox'
+#dir_data = path_Dropbox + '/' + 'dossiers VAN/Fichiers/EDF'
 
 fname = "Enedis_Conso_Heure_20200513-20200618.csv" #à partir du 13/05 
-df = pd.read_csv(os.path.join(dir_data, fname), sep=';')
+df = pd.read_csv(fname, sep=';')
 
 def valkWh_jour(mois, jour, df):
     j_str = '2020-' + mois + '-' + jour + 'T00:30:00+02:00'
